@@ -1,11 +1,14 @@
-<div class="sm:fixed sm:top-0 sm:right-0 p-6 text-end z-10">
+<div class="d-flex justify-content-between align-items-center bg-dark p-2">
+    <div class="logo text-light">Ecommerce-logo</div>
     @auth
-        <a href="{{ url('/dashboard') }}" class="font-semibold text-gray-600 hover:text-gray-900 focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500" wire:navigate>Dashboard</a>
+        <a href="{{ url('/dashboard') }}" class="text-decoration-none" wire:navigate>Dashboard</a>
     @else
-        <a href="{{ route('login') }}" class="font-semibold text-gray-600 hover:text-gray-900 focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500" wire:navigate>Log in</a>
+    <div class="">
+        <a href="{{ route('login') }}" class="text-decoration-none mx-2 text-light" wire:navigate>Log in</a>
 
         @if (Route::has('register'))
-            <a href="{{ route('register') }}" class="ms-4 font-semibold text-gray-600 hover:text-gray-900 focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500" wire:navigate>Register</a>
+            <a href="{{ route('register') }}" class="text-decoration-none mx-2 text-light" wire:navigate>Register</a>
         @endif
+    </div>
     @endauth
 </div>
