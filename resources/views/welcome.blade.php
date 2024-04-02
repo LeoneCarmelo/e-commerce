@@ -22,7 +22,19 @@
         <livewire:welcome.navigation />
         @endif
     </div>
-    <h1>Ecommerce</h1>
+    <h1 class="text-center py-4">Ecommerce</h1>
+    <div class="bg-info p-4 mb-3">
+        <h3 class="text-center">First Banner</h3>
+        <p class="w-75">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis rem consequuntur odit similique. Numquam vel aut officiis, doloremque consectetur natus, fugiat dolor tempore at optio non aperiam temporibus eaque voluptates earum sit quasi velit soluta perferendis voluptatum nobis rerum ea est. Praesentium neque vitae sint ipsum pariatur dignissimos assumenda architecto?</p>
+    </div>
+    <div class="p-4 mb-3">
+        <h3 class="text-center">About us</h3>
+        <p class="w-50 mx-auto">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis rem consequuntur odit similique. Numquam vel aut officiis, doloremque consectetur natus, fugiat dolor tempore at optio non aperiam temporibus eaque voluptates earum sit quasi velit soluta perferendis voluptatum nobis rerum ea est. Praesentium neque vitae sint ipsum pariatur dignissimos assumenda architecto?</p>
+    </div>
+    <div class=" bg-warning p-4 mb-3">
+        <h3>Contacts</h3>
+        <p class="w-75">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis rem consequuntur odit similique. Numquam vel aut officiis, doloremque consectetur natus, fugiat dolor tempore at optio non aperiam temporibus eaque voluptates earum sit quasi velit soluta perferendis voluptatum nobis rerum ea est. Praesentium neque vitae sint ipsum pariatur dignissimos assumenda architecto?</p>
+    </div>
     @livewireScripts
 </body>
 
