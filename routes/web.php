@@ -1,5 +1,7 @@
 <?php
 
+use App\Livewire\Products\CreateProduct;
+use App\Livewire\Products\IndexProduct;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -22,5 +24,8 @@ Route::view('dashboard', 'dashboard')
 Route::view('profile', 'profile')
     ->middleware(['auth'])
     ->name('profile');
+
+Route::get('products/create-product', CreateProduct::class);
+Route::get('products/index-product', IndexProduct::class);
 
 require __DIR__.'/auth.php';
