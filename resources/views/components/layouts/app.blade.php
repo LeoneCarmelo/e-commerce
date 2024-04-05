@@ -21,9 +21,8 @@
     <body class="">
         <div class="">
             <livewire:layout.navigation />
-    
             <!-- Page Content -->
-            <main class="">
+            <main class="s">
                 {{ $slot }}
             </main>
         </div>

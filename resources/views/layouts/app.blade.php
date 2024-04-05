@@ -22,7 +22,7 @@
         <livewire:layout.navigation />
 
         <!-- Page Content -->
-        <main class="">
+        <main class="d-flex">
             {{ $slot }}
         </main>
     </div>

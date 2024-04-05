@@ -4,14 +4,6 @@
             {{ __('Dashboard') }}
         </h2>
     </x-slot>
-
-    <div class="">
-        <div class="">
-            <div class="">
-                <div class="">
-                    {{ __("You're logged in!") }}
-                </div>
-            </div>
-        </div>
-    </div>
+    <x-sidebar />
+    <x-main-content />
 </x-app-layout>

@@ -1,12 +1,47 @@
 @use './common';
-// Variable overrides first
-$primary: #900;
-$enable-shadows: true;
-$prefix: "mo-";
-
+@use './variables' as *;
 // Then import Bootstrap
 @import "../node_modules/bootstrap/scss/bootstrap";
 
+html {
+    overflow: hidden;
+}
 .guest {
     background-color: rgb(112, 132, 132);
 }
+//layout
+ul.nav {
+    height:$navbar-height;
+    background-color: $tertiary;
+}
+
+ul.sidebar {
+    height:calc(100vh - #{$navbar-height});
+    width:$sidebar-width;
+
+    li {
+
+        a {
+            color:$secondary;
+            border-bottom:2px solid none;
+            transition: border-bottom 0.3 ease-in-out;
+    
+            &:hover {
+                border-bottom:2px solid $primary;
+            }
+        }
+        
+    }
+}
+
+main.d-flex {
+    background-color: $secondary;
+    height:calc(100vh - #{$navbar-height});
+    
+}
+
+div:has(> .main-content) {
+    width:100%;
+    overflow:hidden scroll;
+}
+
