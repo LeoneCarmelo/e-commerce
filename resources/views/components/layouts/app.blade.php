@@ -23,7 +23,7 @@
         <div class="">
             <livewire:layout.navigation />
             <!-- Page Content -->
-            <main class="s">
+            <main class="content-own bg_secondary">
                 {{ $slot }}
             </main>
         </div>
