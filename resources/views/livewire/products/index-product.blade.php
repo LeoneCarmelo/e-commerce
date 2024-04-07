@@ -32,7 +32,7 @@
                                             <i class="fa-solid fa-eye text-primary" aria-hidden="true"></i>
                                         </a>
                                         {{-- change route --}}
-                                        <a href="">
+                                        <a href="{{route('edit-product', $product->id)}}">
                                             <i class="fa-solid fa-pencil text-warning" aria-hidden="true"></i>
                                         </a>
                                         <a type="button" class="" data-bs-toggle="modal"
