@@ -22,19 +22,19 @@
                         @forelse ($products as $product)
                             <tr>
                                 <td>{{ $product->name }}</td>
-                                <td width="600">{{ $product->description }}</td>
+                                <td width="600">{{ Str::limit($product->description, 100, '...') }}</td>
                                 <td>{{ $product->weight }} (g)</td>
                                 <td>{{ $product->price }} €</td>
                                 <td>
-                                    <div class="d-flex align-items-center justify-content-between h-100">
+                                    <div class="d-flex align-items-center justify-content-between mt-2">
                                         {{-- change route --}}
-                                        {{--  <a href="{{ route('view-$product', $product->id) }}">
+                                        <a href="{{ route('show-product', $product->id) }}">
                                             <i class="fa-solid fa-eye text-primary" aria-hidden="true"></i>
-                                        </a> --}}
+                                        </a>
                                         {{-- change route --}}
-                                        {{-- <a href="{{ route('edit-$product', $product->id) }}">
+                                        <a href="">
                                             <i class="fa-solid fa-pencil text-warning" aria-hidden="true"></i>
-                                        </a> --}}
+                                        </a>
                                         <a type="button" class="" data-bs-toggle="modal"
                                             data-bs-target="#modalId-{{ $product->id }}">
                                             <i class="fa-solid fa-trash-can text-danger"></i>
