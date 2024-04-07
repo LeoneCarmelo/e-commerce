@@ -6,6 +6,10 @@
 html {
     overflow: hidden;
 }
+
+body {
+    background-color: $secondary;
+}
 .guest {
     background-color: rgb(112, 132, 132);
 }
@@ -13,11 +17,13 @@ html {
 ul.nav {
     height:$navbar-height;
     background-color: $tertiary;
+    border-bottom:5px solid $primary-light;
 }
 
 ul.sidebar {
     height:calc(100vh - #{$navbar-height});
     width:$sidebar-width;
+    border-right:5px solid $primary-light;
 
     li {
 
@@ -37,11 +43,17 @@ ul.sidebar {
 main.d-flex {
     background-color: $secondary;
     height:calc(100vh - #{$navbar-height});
+    border-top:1px;
     
 }
 
 div:has(> .main-content) {
     width:100%;
     overflow:hidden scroll;
+}
+
+//Sessin Message
+.alert-info {
+    right:3rem;
 }
 

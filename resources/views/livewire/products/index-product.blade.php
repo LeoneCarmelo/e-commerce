@@ -3,7 +3,7 @@
         {{-- check session.message --}}
         @include('livewire.partials.session-message')
         <h1 class="py-3 text-dark">I tuoi prodotti
-        
+
         </h1>
         <div class="row">
             <div class="table-responsive">
@@ -22,26 +22,27 @@
                         @forelse ($products as $product)
                             <tr>
                                 <td>{{ $product->name }}</td>
-                                <td>{{ $product->description }}</td>
-                                <td>{{ $product->weight }}</td>
-                                <td>{{ $product->price }}</td>
+                                <td width="600">{{ $product->description }}</td>
+                                <td>{{ $product->weight }} (g)</td>
+                                <td>{{ $product->price }} €</td>
                                 <td>
                                     <div class="d-flex align-items-center justify-content-between h-100">
                                         {{-- change route --}}
-                                       {{--  <a href="{{ route('view-$product', $product->id) }}">
+                                        {{--  <a href="{{ route('view-$product', $product->id) }}">
                                             <i class="fa-solid fa-eye text-primary" aria-hidden="true"></i>
                                         </a> --}}
                                         {{-- change route --}}
                                         {{-- <a href="{{ route('edit-$product', $product->id) }}">
                                             <i class="fa-solid fa-pencil text-warning" aria-hidden="true"></i>
                                         </a> --}}
-                                        {{-- <a type="button" data-bs-toggle="modal"
+                                        <a type="button" class="" data-bs-toggle="modal"
                                             data-bs-target="#modalId-{{ $product->id }}">
                                             <i class="fa-solid fa-trash-can text-danger"></i>
-                                        </a> --}}
-                                        {{-- {{ Modal }} --}}
-                                        {{-- change route --}}
-                                        {{-- <div class="modal fade" id="modalId-{{ $product->id }}" tabindex="-1"
+                                        </a>
+
+
+                                        <!-- Modal -->
+                                        <div class="modal fade" id="modalId-{{ $product->id }}" tabindex="-1"
                                             data-bs-backdrop="static" data-bs-keyboard="false" role="dialog"
                                             aria-labelledby="modalTitleId" aria-hidden="true">
                                             <div class="modal-dialog" role="dialog">
@@ -52,7 +53,7 @@
                                                     </div>
                                                     <div class="modal-body text-dark text-center py-3">
                                                         Sei sicuro di eliminare
-                                                        {{ $product->name }}?
+                                                        questo prodotto?
                                                     </div>
                                                     <div class="modal-footer">
                                                         <button type="button" class="btn btn-outline-secondary"
@@ -63,7 +64,8 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div> --}}
+                                        </div>
+
                                     </div>
                                 </td>
                             </tr>

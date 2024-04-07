@@ -17,4 +17,10 @@ class IndexProduct extends Component
     {
         return view('livewire.products.index-product');
     }
+
+    public function deleteProduct(Product $product){
+        $product->delete();
+        session()->flash('message', 'Product deleted successfully.');
+        return $this->redirect('/products/index-product');
+ }
 }
