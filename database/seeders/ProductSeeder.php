@@ -20,7 +20,8 @@ class ProductSeeder extends Seeder
                 'name' => $product['name'],
                 'description' => $product['description'],
                 'weight' => $product['weight'],
-                'price' => $product['price']
+                'price' => $product['price'],
+                'user_id' => $product['user_id']
             ]);
         }
     }

@@ -4,14 +4,18 @@ namespace App\Livewire\Products;
 
 use Livewire\Component;
 use App\Models\Product;
+use Illuminate\Support\Facades\Auth;
+
+use function Laravel\Prompts\error;
 
 class IndexProduct extends Component
 {
     public $products;
 
     public function mount(){
-        $this->products = Product::orderByDesc('id')->get();
+        $this->products = Product::where('user_id', Auth::id())->orderByDesc('id')->get();
     }
+
 
     public function render()
     {

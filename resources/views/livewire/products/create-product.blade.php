@@ -1,7 +1,7 @@
 <div>
     <div class='row justify-content-center pt-5'>
-        <h2 class="text-center mb-3">Add Product</h2>
-        <div class='card w-50'>
+        <h2 class="text-center mb-3">Aggiungi Prodotto</h2>
+        <div class='card w-50 bg_tertiary'>
             <div class='card-body'>
                 <form wire:submit='save'>
                     <div class='mb-3'>
@@ -9,7 +9,7 @@
                         {{-- change name --}}
                         <input wire:model="name" type="text" name="name" id="name" class="form-control"
                             aria-describedby="helpId">
-                        <small id="helpId" class="text-muted">Type your name address</small>
+                        <small id="helpId" class="text_primary-light">Type your name address</small>
                         @error('name')
                             <div class='invalid-feedback'>{{ message }}</div>
                         @enderror
@@ -19,7 +19,7 @@
                         {{-- change description --}}
                         <input wire:model="description" type="text" name="description" id="description" class="form-control"
                             aria-describedby="helpId">
-                        <small id="helpId" class="text-muted">Type your description address</small>
+                        <small id="helpId" class="text_primary-light">Type your description address</small>
                         @error('description')
                             <div class='invalid-feedback'>{{ message }}</div>
                         @enderror
@@ -29,7 +29,7 @@
                         {{-- change weight --}}
                         <input wire:model="weight" type="text" name="weight" id="weight" class="form-control"
                             aria-describedby="helpId">
-                        <small id="helpId" class="text-muted">Insert the weight</small>
+                        <small id="helpId" class="text_primary-light">Insert the weight</small>
                         @error('weight')
                             <div class='invalid-feedback'>{{ message }}</div>
                         @enderror
@@ -39,13 +39,13 @@
                         {{-- change price --}}
                         <input wire:model="price" type="price" name="price" id="price" class="form-control"
                             aria-describedby="helpId" />
-                        <small id="helpId" class="text-muted">Add price</small>
+                        <small id="helpId" class="text_primary-light">Add price</small>
                         @error('price')
                             <div class='invalid-feedback'>{{ message }}</div>
                         @enderror
                     </div>
                     {{-- change route --}}
-                    <button wire:navigate href="" class="btn btn-secondary">Back</button>
+                    <button wire:navigate href="/products/index-product" class="btn btn-secondary">Back</button>
                     <button type="submit" class="btn btn-primary">
                         Submit
                     </button>

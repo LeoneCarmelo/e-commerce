@@ -1,6 +1,6 @@
 <?php
 
-use App\Livewire\Product\EditProduct;
+use App\Livewire\Products\EditProduct;
 use App\Livewire\Products\CreateProduct;
 use App\Livewire\Products\IndexProduct;
 use App\Livewire\Products\ShowProduct;

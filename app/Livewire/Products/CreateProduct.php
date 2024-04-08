@@ -3,6 +3,7 @@
 namespace App\Livewire\Products;
 
 use App\Models\Product;
+use Illuminate\Support\Facades\Auth;
 use Livewire\Component;
 
 class CreateProduct extends Component
@@ -14,7 +15,11 @@ class CreateProduct extends Component
 
     public function render()
     {
-        return view('livewire.products.create-product');
+        if(Auth::id() != 1) {
+            abort(403, 'You are not authorized');
+        } else {
+            return view('livewire.products.create-product');
+        }
     }
 
     public function save()

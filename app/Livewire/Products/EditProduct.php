@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Livewire\Product;
+namespace App\Livewire\Products;
 
 use Livewire\Component;
 use App\Models\Product;
@@ -23,7 +23,7 @@ class EditProduct extends Component
 
     public function render()
     {
-        return view('livewire.product.edit-product');
+        return view('livewire.products.edit-product');
     }
 
     public function update()

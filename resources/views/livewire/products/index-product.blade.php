@@ -2,9 +2,8 @@
     <div class="container p-5 position-relative">
         {{-- check session.message --}}
         @include('livewire.partials.session-message')
-        <h1 class="py-3 text-dark">I tuoi prodotti
-
-        </h1>
+        <h1 class="py-3 text-dark d-flex align-items-center justify-content-between">I tuoi prodotti 
+            <a wire:navigate href="create-product" class="text-decoration-none text_primary-light"><i class="fa-solid fa-plus fs-2"></i></a></h1>
         <div class="row">
             <div class="table-responsive">
                 <table class="table table-dark table-striped table-hover table-bordered">
