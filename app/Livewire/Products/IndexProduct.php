@@ -19,6 +19,7 @@ class IndexProduct extends Component
 
     public function render()
     {
+
         return view('livewire.products.index-product');
     }
 

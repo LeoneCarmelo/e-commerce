@@ -12,6 +12,7 @@ class EditProduct extends Component
     public $description;
     public $weight;
     public $price;
+    public $available;
 
     public function mount(Product $product)
     {
@@ -19,6 +20,7 @@ class EditProduct extends Component
         $this->description = $product->description;
         $this->weight = $product->weight;
         $this->price = $product->price;
+        $this->available = $product->available;
     }
 
     public function render()
@@ -32,7 +34,8 @@ class EditProduct extends Component
             'name' => 'required|max:50',
             'price' => 'required|numeric',
             'description' => 'nullable',
-            'weight' => 'nullable'
+            'weight' => 'nullable',
+            'available' => 'nullable',
         ],[
             'name.required' => 'The name is required. Please insert your name',
             'name.max' => 'The name can\'t exceed the 50 characters',

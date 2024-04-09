@@ -9,10 +9,11 @@
                 <table class="table table-dark table-striped table-hover table-bordered">
                     <thead>
                         <tr>
-                            <th scope="col">Name</th>
-                            <th scope="col">Description</th>
-                            <th scope="col">Weight</th>
-                            <th scope="col">Price</th>
+                            <th scope="col">Nome</th>
+                            <th scope="col">Descrizione</th>
+                            <th scope="col">Disponibilità</th>
+                            <th scope="col">Peso</th>
+                            <th scope="col">Prezzo</th>
                             <th scope="col">Actions</th>
                         </tr>
                     </thead>
@@ -22,6 +23,7 @@
                             <tr>
                                 <td>{{ $product->name }}</td>
                                 <td width="600">{{ Str::limit($product->description, 100, '...') }}</td>
+                                <td>{{ $product->available === 1 ? 'Disponibile' : 'Non disponibile' }}</td>
                                 <td>{{ $product->weight }} (g)</td>
                                 <td>{{ $product->price }} €</td>
                                 <td>
