@@ -12,6 +12,8 @@ class CreateProduct extends Component
     public $description = '';
     public $weight = '';
     public $price = '';
+    public $available = '';
+    public $userId;
 
     public function render()
     {
@@ -28,13 +30,17 @@ class CreateProduct extends Component
             'name' => 'required|max:50',
             'description' => 'nullable',
             'weight' => 'nullable',
-            'price' => 'required|numeric'
+            'price' => 'required|numeric',
+            'available' => 'nullable',
         ],[
             'name.required' => 'The name is required. Please insert your name',
             'name.max' => 'The name can\'t exceed the 50 characters',
             'price.numeric' => 'The price number must contain only numbers',
             'price.required' => 'The price is required. Please insert thre price of the products',
         ]);
+        
+        $this->userId = Auth::id();
+        $val_data['user_id'] = $this->userId;
 
         Product::create($val_data);
 

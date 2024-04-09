@@ -1,5 +1,8 @@
 <div class="d-flex justify-content-between align-items-center bg-dark p-2">
-    <a href="{{ url('/') }}" class="logo text-light text-decoration-none">Ecommerce-logo</a>
+    <div>
+        <a href="{{ url('/') }}" class="logo text-light text-decoration-none">Ecommerce-logo</a>
+        <a href="{{ url('products') }}" class="logo text-light text-decoration-none ms-3">Products</a>
+    </div>
     @auth
         <a href="{{ url('/dashboard') }}" class="text-decoration-none" wire:navigate>Dashboard</a>
     @else

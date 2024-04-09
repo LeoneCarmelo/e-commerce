@@ -19,7 +19,10 @@ new class extends Component
 <!-- Nav tabs -->
 <ul class="nav nav-tabs justify-content-between align-items-center">
     <li class="nav-item">
-        <a href="{{route('dashboard')}}" class="nav-link">Dashboard</a>
+        <div class="d-flex align-items-center">
+            <a href="{{route('dashboard')}}" class="nav-link">Dashboard</a>
+            <a wire:navigate href="/" class="nav-link">Home Page</a>
+        </div>
     </li>
 
     <li class="nav-item d-flex">
