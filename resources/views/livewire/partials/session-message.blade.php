@@ -1,5 +1,5 @@
 @if(session('message'))
-<div class="alert alert-info d-flex justify-content-between gap-3 px-3 align-items-center position-absolute" role="alert">
+<div class="alert alert-info d-flex justify-content-between gap-3 px-3 align-items-center position-absolute z-1" role="alert">
     <span>
         <strong>
             <i class="fa-solid fa-thumbs-up fa-shake fa-lg me-2"></i>

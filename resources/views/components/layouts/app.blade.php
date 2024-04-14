@@ -19,7 +19,7 @@
         @livewireStyles
     </head>
 
-    <body class="">
+    <body class="layout">
         <div class="">
             <livewire:layout.navigation />
             <!-- Page Content -->

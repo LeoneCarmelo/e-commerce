@@ -1,5 +1,6 @@
 <?php
 
+use App\Livewire\Cart;
 use App\Livewire\Products\EditProduct;
 use App\Livewire\Products\CreateProduct;
 use App\Livewire\Products\IndexProduct;
@@ -37,6 +38,7 @@ Route::get('products/{product}/edit', EditProduct::class)->name('edit-product');
 
 //Client routes
 Route::get('products', Products::class);
+Route::get('cart', Cart::class);
 
 
 
