@@ -1,13 +1,9 @@
 <div>
     <div class="container-fluid p-5">
-        <a wire:navigate href="/cart" class="shop_cart p-1 me-2 text-decoration-none">
-            <i class="fa-solid fa-cart-shopping fs-5 me-2 text-success"></i>
-            <span class="fs-4">{{ $totalQuantity }}</span>
-        </a>
         @include('livewire.partials.session-message')
         <div class="row row-cols-2 g-4">
             @forelse ($products as $product)
-            <form class="col" wire:key="{{ $product->id }}" wire:submit.prevent="addToCart('{{ $product->id }}')">
+            <form class="col" wire:key="{{ $product->id }}">
                 <div class="card text-start">
                     {{-- TODO Add Image --}}
                     {{-- <img class="card-img-top" src="holder.js/100px180/" alt="Title" /> --}}
